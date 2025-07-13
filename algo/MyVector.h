@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include <iostream>
 #include <assert.h>
@@ -61,7 +61,7 @@ public:
     void remove(size_t index) {
         if (index >= size) return; 
 
-        // Сдвигаем элементы после index влево на 1
+        // РЎРґРІРёРіР°РµРј СЌР»РµРјРµРЅС‚С‹ РїРѕСЃР»Рµ index РІР»РµРІРѕ РЅР° 1
         for (size_t i = index; i + 1 < size; ++i) {
             data[i] = data[i + 1];
         }
@@ -69,7 +69,7 @@ public:
     }
 
     void push_back(int value) {
-        // Если памяти не хватает, выделяем новую, в 2 раза больше
+        // Р•СЃР»Рё РїР°РјСЏС‚Рё РЅРµ С…РІР°С‚Р°РµС‚, РІС‹РґРµР»СЏРµРј РЅРѕРІСѓСЋ, РІ 2 СЂР°Р·Р° Р±РѕР»СЊС€Рµ
         if (size == capacity) {
             size_t new_capacity;
             if (capacity == 0) {
