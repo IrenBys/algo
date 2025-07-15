@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-#include "MyVector.h"
+#include "tests.h"
 
 int main()
 {
