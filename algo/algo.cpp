@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-#include "MyVector.h"
+#include "tests.h"
 
 int main()
 {
@@ -11,6 +11,14 @@ int main()
 	test_remove();
 	test_push_back();
 	test_pop_back();
+
+	test_size_for_list();
+	test_push_front_for_list();
+	test_push_back_for_list();
+	test_pop_front_for_list();
+	test_pop_back_for_list();
+	test_insert_for_list();
+	test_remove_for_list();
 }
 
 
