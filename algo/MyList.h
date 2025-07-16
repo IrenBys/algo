@@ -12,8 +12,8 @@ public:
     void insert(size_t index, int value);
     void remove(size_t index);    
 
-    int front();                   
-    int back();   
+    int front() const;                   
+    int back() const;   
 
     size_t list_size() const;
 
@@ -21,6 +21,7 @@ private:
     struct Node {
         int data;
         Node* next;
+        Node* prev;
     };
 
     Node* head;
