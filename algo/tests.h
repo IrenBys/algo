@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <assert.h>
 #include "MyVector.h"
@@ -45,7 +45,7 @@ void test_pop_back() {
     std::cout << "Test pop_back passed\n";
 }
 
-// Ñïèñîê
+// Ð¡Ð¿Ð¸ÑÐ¾Ðº
 void test_size_for_list() {
     List l;
     assert(l.list_size() == 0);
