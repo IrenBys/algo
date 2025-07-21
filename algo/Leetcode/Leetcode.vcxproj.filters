@@ -15,7 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vector_tasks.cpp">
+    <ClCompile Include="1929_Concatenation of Array.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="1470_Shuffle the Array.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="21_Merge Two Sorted Lists.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

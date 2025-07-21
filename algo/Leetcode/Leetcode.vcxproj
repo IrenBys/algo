@@ -123,7 +123,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="vector_tasks.cpp" />
+    <ClCompile Include="1470_Shuffle the Array.cpp" />
+    <ClCompile Include="1929_Concatenation of Array.cpp" />
+    <ClCompile Include="21_Merge Two Sorted Lists.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
