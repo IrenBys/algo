@@ -1,5 +1,6 @@
 ﻿#include "MyList.h"
 #include <iostream>
+#include <cassert> 
 
 void List::push_front(int value) {
 	Node* newNode = new Node;
@@ -38,7 +39,7 @@ void List::push_back(int value) {
 }
 
 void List::pop_front() {
-	if (head == nullptr) return;
+	assert(head != nullptr && "Cannot pop_front from empty list");
 
 	Node* temp = head;
 	head = head->next;
@@ -55,7 +56,7 @@ void List::pop_front() {
 }
 
 void List::pop_back() {
-	if (tail == nullptr) return;
+	assert(tail != nullptr && "Cannot pop_back from empty list");
 
 	Node* temp = tail; //Сохраняем указатель на последний узел
 
@@ -74,7 +75,7 @@ void List::pop_back() {
 }
 
 void List::insert(size_t index, int value) {
-	if (index > size) return;
+	assert(index <= size && "Insert index out of range");
 
 	if (index == 0) {
 		push_front(value);
@@ -110,7 +111,7 @@ void List::insert(size_t index, int value) {
 
 
 void List::remove(size_t index) {
-	if (index >= size) return;
+	assert(index < size && "Remove index out of range");
 
 	if (index == 0) {
 		pop_front();
@@ -142,16 +143,12 @@ void List::remove(size_t index) {
 
 
 int List::front() const {
-	if (head == nullptr) {
-		throw std::out_of_range("List is empty");
-	}
+	assert(head != nullptr && "List is empty (front)");
 	return head->data;
 }
 
 int List::back() const {
-	if (tail == nullptr) {
-		throw std::out_of_range("List is empty");
-	}
+	assert(tail != nullptr && "List is empty (back)");
 	return tail->data;
 }
 
