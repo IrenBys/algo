@@ -1,6 +1,5 @@
 #include "MyVector.h"
 #include <iostream>
-#include <cassert>  // подключаем assert
 
 Vector::Vector() : data(nullptr), capacity(0), size(0) {}
 
@@ -13,12 +12,17 @@ Vector::~Vector() {
 }
 
 int& Vector::operator[](size_t index) {
-    assert(index < size && "Index out of range in operator[]");
+    if (index >= size) {
+        throw std::out_of_range("Index out of range in operator[]");
+    }
+
     return data[index];
 }
 
 void Vector::insert(size_t index, int value) {
-    assert(index <= size && "Insert index out of range");
+    if (index > size) {
+        throw std::out_of_range("Insert index out of range");
+    }
 
     if (size == capacity) {
         size_t new_capacity;
@@ -54,7 +58,9 @@ void Vector::insert(size_t index, int value) {
 }
 
 void Vector::remove(size_t index) {
-    assert(index < size && "Remove index out of range");
+    if (index >= size) {
+        throw std::out_of_range("Remove index out of range");
+    }
 
     for (size_t i = index; i + 1 < size; ++i) {
         data[i] = data[i + 1];
@@ -88,7 +94,10 @@ void Vector::push_back(int value) {
 }
 
 void Vector::pop_back() {
-    assert(size > 0 && "Cannot pop_back from empty vector");
+    if (size == 0) {
+        throw std::underflow_error("Cannot pop_back from empty vector");
+    }
+
     --size;
 }
 

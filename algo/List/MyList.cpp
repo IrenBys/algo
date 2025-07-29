@@ -39,7 +39,9 @@ void List::push_back(int value) {
 }
 
 void List::pop_front() {
-	assert(head != nullptr && "Cannot pop_front from empty list");
+	if (head == nullptr) {
+		throw std::underflow_error("Cannot pop_front from an empty list");
+	}
 
 	Node* temp = head;
 	head = head->next;
@@ -56,7 +58,9 @@ void List::pop_front() {
 }
 
 void List::pop_back() {
-	assert(tail != nullptr && "Cannot pop_back from empty list");
+	if (tail == nullptr) {
+		throw std::underflow_error("Cannot pop_back from an empty list");
+	}
 
 	Node* temp = tail; //Сохраняем указатель на последний узел
 
@@ -75,7 +79,9 @@ void List::pop_back() {
 }
 
 void List::insert(size_t index, int value) {
-	assert(index <= size && "Insert index out of range");
+	if (index > size) {
+		throw std::out_of_range("Insert index out of range");
+	}
 
 	if (index == 0) {
 		push_front(value);
@@ -111,7 +117,9 @@ void List::insert(size_t index, int value) {
 
 
 void List::remove(size_t index) {
-	assert(index < size && "Remove index out of range");
+	if (index >= size) {
+		throw std::out_of_range("Remove index out of range");
+	}
 
 	if (index == 0) {
 		pop_front();
@@ -143,12 +151,18 @@ void List::remove(size_t index) {
 
 
 int List::front() const {
-	assert(head != nullptr && "List is empty (front)");
+	if (head == nullptr) {
+		throw std::underflow_error("List is empty, cannot access front()");
+	}
+
 	return head->data;
 }
 
 int List::back() const {
-	assert(tail != nullptr && "List is empty (back)");
+	if (tail == nullptr) {
+		throw std::underflow_error("List is empty, cannot access back()");
+	}
+
 	return tail->data;
 }
 
