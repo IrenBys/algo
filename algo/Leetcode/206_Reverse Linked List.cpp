@@ -27,6 +27,5 @@ private:
 public:
     ListNode* reverseList(ListNode* head) {
         return recur_func(head, nullptr);
-
     }
 };

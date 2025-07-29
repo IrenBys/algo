@@ -30,5 +30,8 @@
     <ClCompile Include="160_Intersection of Two Linked Lists.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="206_Reverse Linked List.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
