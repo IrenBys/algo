@@ -129,6 +129,7 @@
     <ClCompile Include="206_Reverse Linked List.cpp" />
     <ClCompile Include="21_Merge Two Sorted Lists.cpp" />
     <ClCompile Include="83_Remove Duplicates from Sorted List.cpp" />
+    <ClCompile Include="92_Reverse Linked List.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
