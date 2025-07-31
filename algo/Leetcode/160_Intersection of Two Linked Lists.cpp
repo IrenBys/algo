@@ -23,42 +23,40 @@ public:
         ListNode* initialA = headA;
         ListNode* initialB = headB;
 
-        while (headA)
-        {
+        while (initialA) {
             listA_size++;
-            headA = headA->next;
+            initialA = initialA->next;
         }
 
-        while (headB)
-        {
+        while (initialB) {
             listB_size++;
-            headB = headB->next;
+            initialB = initialB->next;
         }
 
-        headA = initialA;
-        headB = initialB;
+        initialA = headA;
+        initialB = headB;
 
         int skip = std::max(listA_size, listB_size) - std::min(listA_size, listB_size);
         if (listA_size > listB_size) {
             while (skip != 0) {
-                headA = headA->next;
+                initialA = initialA->next;
                 skip--;
             }
         }
         else {
             while (skip != 0) {
-                headB = headB->next;
+                initialB = initialB->next;
                 skip--;
             }
         }
 
-        while (headA && headB) {
-            if (headA == headB) {
-                return headA;
+        while (initialA && initialB) {
+            if (initialA == initialB) {
+                return initialA;
             }
             else {
-                headA = headA->next;
-                headB = headB->next;
+                initialA = initialA->next;
+                initialB = initialB->next;
             }
         }
         return nullptr;
