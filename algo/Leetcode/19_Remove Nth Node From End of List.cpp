@@ -45,6 +45,7 @@ public:
         }
 
         prev->next = curr->next;
+        delete curr;
         return head;
     }
 };
