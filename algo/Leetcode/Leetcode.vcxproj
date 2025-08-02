@@ -130,6 +130,8 @@
     <ClCompile Include="19_Remove Nth Node From End of List.cpp" />
     <ClCompile Include="206_Reverse Linked List.cpp" />
     <ClCompile Include="21_Merge Two Sorted Lists.cpp" />
+    <ClCompile Include="27_Remove Element.cpp" />
+    <ClCompile Include="2824_Count Pairs Whose Sum is Less than Target.cpp" />
     <ClCompile Include="83_Remove Duplicates from Sorted List.cpp" />
     <ClCompile Include="92_Reverse Linked List.cpp" />
   </ItemGroup>
