@@ -14,7 +14,7 @@
 class Solution {
 public:
     int maximumWealth(std::vector < std::vector<int >>& accounts) {
-        int result = 0;
+        int res = 0;
 
         for (int i = 0; i < accounts.size(); ++i) {
             int summ = 0;
@@ -22,9 +22,9 @@ public:
             for (int j = 0; j < accounts[i].size(); ++j) {
                 summ += accounts[i][j];
             }
-            result = std::max(summ, result);
+            res = std::max(summ, res);
         }
-        return result;
+        return res;
     }
 };
 
