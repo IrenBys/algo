@@ -14,21 +14,16 @@
 class Solution {
 public:
     int maximumWealth(std::vector < std::vector<int >>& accounts) {
-        std::vector<int> temp = {};
+        int result = 0;
 
         for (int i = 0; i < accounts.size(); ++i) {
             int summ = 0;
+            int prev_summ = 0;
             for (int j = 0; j < accounts[i].size(); ++j) {
                 summ += accounts[i][j];
             }
-            temp.push_back(summ);
+            result = std::max(summ, result);
         }
-
-        std::sort(temp.begin(), temp.end(), std::greater<int>());
-
-        for (int i = 0; i < temp.size(); ++i) {
-            std::cout << temp[i] << ' ' << std::endl;
-        }
-        return temp[0];
+        return result;
     }
 };
