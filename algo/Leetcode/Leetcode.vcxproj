@@ -126,6 +126,7 @@
     <ClCompile Include="1290_Convert Binary Number in a Linked List to Integer.cpp" />
     <ClCompile Include="1470_Shuffle the Array.cpp" />
     <ClCompile Include="160_Intersection of Two Linked Lists.cpp" />
+    <ClCompile Include="1672_Richest Customer Wealth.cpp" />
     <ClCompile Include="1929_Concatenation of Array.cpp" />
     <ClCompile Include="19_Remove Nth Node From End of List.cpp" />
     <ClCompile Include="206_Reverse Linked List.cpp" />
