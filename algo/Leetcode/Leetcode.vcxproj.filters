@@ -51,5 +51,8 @@
     <ClCompile Include="1672_Richest Customer Wealth.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="1662_Check If Two String Arrays are Equivalent.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
