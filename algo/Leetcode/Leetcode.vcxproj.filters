@@ -48,5 +48,8 @@
     <ClCompile Include="2824_Count Pairs Whose Sum is Less than Target.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="1672_Richest Customer Wealth.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
