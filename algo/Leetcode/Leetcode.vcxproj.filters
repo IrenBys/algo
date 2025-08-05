@@ -54,5 +54,11 @@
     <ClCompile Include="1662_Check If Two String Arrays are Equivalent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="2057_ Smallest Index With Equal Value.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="349_Intersection of Two Arrays.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
