@@ -133,6 +133,7 @@
     <ClCompile Include="2057_ Smallest Index With Equal Value.cpp" />
     <ClCompile Include="206_Reverse Linked List.cpp" />
     <ClCompile Include="21_Merge Two Sorted Lists.cpp" />
+    <ClCompile Include="24_Swap Nodes in Pairs.cpp" />
     <ClCompile Include="27_Remove Element.cpp" />
     <ClCompile Include="2824_Count Pairs Whose Sum is Less than Target.cpp" />
     <ClCompile Include="349_Intersection of Two Arrays.cpp" />
