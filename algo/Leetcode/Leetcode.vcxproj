@@ -137,6 +137,7 @@
     <ClCompile Include="27_Remove Element.cpp" />
     <ClCompile Include="2824_Count Pairs Whose Sum is Less than Target.cpp" />
     <ClCompile Include="349_Intersection of Two Arrays.cpp" />
+    <ClCompile Include="61_Rotate List.cpp" />
     <ClCompile Include="83_Remove Duplicates from Sorted List.cpp" />
     <ClCompile Include="92_Reverse Linked List.cpp" />
   </ItemGroup>
