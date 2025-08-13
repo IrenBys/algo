@@ -5,11 +5,11 @@
 
 int main()
 {
-    test_empty_and_size();
-	test_push_back_and_back();
-	test_front_and_back();
-	test_pop_front();
-	test_pop_front_until_empty();
+    test_queue_size();
+    test_push();
+    test_pop();
+    test_front_back();
+    test_wraparound();
 }
 
 

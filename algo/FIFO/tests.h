@@ -4,47 +4,48 @@
 #include <iostream>
 #include "MyQueue.h"
 
-void test_empty_and_size() {
+void test_queue_size() {
     MyQueue q;
-    assert(q.empty());
-    assert(q.size() == 0);
-    std::cout << "Test empty and size passed\n";
+    assert(q.queue_size() == 0);
+    std::cout << "Test queue_size passed\n";
 }
 
-void test_push_back_and_back() {
+void test_push() {
     MyQueue q;
-    q.push_back(10);
-    assert(!q.empty());
-    assert(q.size() == 1);
+    q.push(10);
+    assert(q.front() == 10);
     assert(q.back() == 10);
-    std::cout << "Test push_back and back passed\n";
+    std::cout << "Test push passed\n";
 }
 
-void test_front_and_back() {
+void test_pop() {
     MyQueue q;
-    q.push_back(1);
-    q.push_back(2);
-    q.push_back(3);
+    q.push(10);
+    q.push(20);
+    q.pop();
+    assert(q.queue_size() == 1);
+    assert(q.front() == 20);
+    std::cout << "Test pop passed\n";
+}
+
+void test_front_back() {
+    MyQueue q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
     assert(q.front() == 1);
     assert(q.back() == 3);
-    std::cout << "Test front and back passed\n";
+    std::cout << "Test front/back passed\n";
 }
 
-void test_pop_front() {
-    MyQueue q;
-    q.push_back(5);
-    q.push_back(6);
-    q.pop_front();
-    assert(q.size() == 1);
-    assert(q.front() == 6);
-    std::cout << "Test pop_front passed\n";
+void test_wraparound() {
+    MyQueue q(3);
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.pop();
+    q.push(4);
+    assert(q.front() == 2);
+    assert(q.back() == 4);
+    std::cout << "Test wraparound passed\n";
 }
-
-void test_pop_front_until_empty() {
-    MyQueue q;
-    q.push_back(100);
-    q.pop_front();
-    assert(q.empty());
-    std::cout << "Test pop_front until empty passed\n";
-}
-
