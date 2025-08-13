@@ -1,4 +1,4 @@
-#include "MyVector.h"
+/*/#include "MyVector.h"
 #include <iostream>
 
 Vector::Vector() : data(nullptr), capacity(0), size(0) {}
@@ -103,4 +103,4 @@ void Vector::pop_back() {
 
 size_t Vector::vec_size() const {
     return size;
-}
+}*/

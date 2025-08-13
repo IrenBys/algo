@@ -11,5 +11,6 @@ int main()
 	test_remove();
 	test_push_back();
 	test_pop_back();
+	test_with_strings();
 }
 
