@@ -1,24 +1,25 @@
-#pragma once
+﻿#pragma once
 
 #include <vector>
 
 class MyQueue {
 private:
-    std::vector<int> data;
+    int* data;          // массив данных
+    size_t capacity;    // емкость
+    size_t size;        // количество элементов
+    size_t head;        // индекс начала
+    size_t tail;        // индекс конца
 
 public:
-    MyQueue(); // default constructor
+    MyQueue();
+    MyQueue(size_t n);
+    ~MyQueue();
 
-    bool empty() const;       // check if empty
-    std::size_t size() const; // get number of elements
-
-    int& front();             // access first element
-    const int& front() const;
-
-    int& back();              // access last element
-    const int& back() const;
-
-    void push_back(int value); // add element to the back
-    void pop_front();          // remove element from the front
+    void push(int value);      // добавить в конец
+    void pop();                // удалить из начала
+    int& front();              // первый элемент
+    int& back();               // последний элемент
+    bool empty() const;        // проверка на пустоту
+    size_t queue_size() const; // количество элементов
 };
 
