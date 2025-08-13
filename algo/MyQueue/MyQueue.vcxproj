@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{57e5a578-0467-4424-9f55-972a4101dca4}</ProjectGuid>
-    <RootNamespace>Leetcode</RootNamespace>
+    <ProjectGuid>{747fa87e-6db2-434e-9a07-a41226e5d639}</ProjectGuid>
+    <RootNamespace>MyQueue</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,24 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="1290_Convert Binary Number in a Linked List to Integer.cpp" />
-    <ClCompile Include="1470_Shuffle the Array.cpp" />
-    <ClCompile Include="160_Intersection of Two Linked Lists.cpp" />
-    <ClCompile Include="1662_Check If Two String Arrays are Equivalent.cpp" />
-    <ClCompile Include="1672_Richest Customer Wealth.cpp" />
-    <ClCompile Include="1929_Concatenation of Array.cpp" />
-    <ClCompile Include="19_Remove Nth Node From End of List.cpp" />
-    <ClCompile Include="2057_ Smallest Index With Equal Value.cpp" />
-    <ClCompile Include="206_Reverse Linked List.cpp" />
-    <ClCompile Include="21_Merge Two Sorted Lists.cpp" />
-    <ClCompile Include="24_Swap Nodes in Pairs.cpp" />
-    <ClCompile Include="27_Remove Element.cpp" />
-    <ClCompile Include="2824_Count Pairs Whose Sum is Less than Target.cpp" />
-    <ClCompile Include="349_Intersection of Two Arrays.cpp" />
-    <ClCompile Include="430_Flatten a Multilevel Doubly Linked List.cpp" />
-    <ClCompile Include="61_Rotate List.cpp" />
-    <ClCompile Include="83_Remove Duplicates from Sorted List.cpp" />
-    <ClCompile Include="92_Reverse Linked List.cpp" />
+    <ClCompile Include="MyQueue.cpp" />
+    <ClCompile Include="MyQueueClass.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyQueueClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
