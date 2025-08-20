@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cassert> 
 
-void List::push_front(int value) {
+/*void List::push_front(int value) {
 	Node* newNode = new Node;
 	newNode->data = value;
 	newNode->next = head;
@@ -168,5 +168,5 @@ int List::back() const {
 
 size_t List::list_size() const {
 	return size;
-}
+}*/
 

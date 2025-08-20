@@ -1,6 +1,6 @@
 #pragma once
 
-class List
+/*class List
 {
 public:
     List() : head(nullptr), tail(nullptr), size(0) {};
@@ -27,5 +27,5 @@ private:
     Node* head;
     Node* tail;
     size_t size;
-};
+};*/
 

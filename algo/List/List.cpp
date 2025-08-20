@@ -13,4 +13,5 @@ int main()
 	test_pop_back_for_list();
 	test_insert_for_list();
 	test_remove_for_list();
+	test_string_list();
 }
