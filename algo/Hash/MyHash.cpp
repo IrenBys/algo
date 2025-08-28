@@ -1,5 +1,6 @@
 #include "MyHash.h"
 #include <iostream>
+#include <stdexcept> 
 
 MyHash::MyHash() {
 	for(int i = 0; i < TABLE_SIZE; i++) {
@@ -26,7 +27,7 @@ void MyHash::insert(int key) {
 		}
 	}
 
-	std::cout << "Hash table is full, cannot insert key: " << key << std::endl;
+	throw std::overflow_error("Hash table is full");
 }
 
 void MyHash::erase(int key) {
@@ -42,6 +43,8 @@ void MyHash::erase(int key) {
 			return;
 		}
 	}
+
+	throw std::runtime_error("Key not found");
 }
 
 bool MyHash::contains(int key) {
