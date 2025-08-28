@@ -29,6 +29,43 @@ void MyHash::insert(int key) {
 	std::cout << "Hash table is full, cannot insert key: " << key << std::endl;
 }
 
+void MyHash::erase(int key) {
+	int index = hashFunction(key);
+	for (int i = 0; i < TABLE_SIZE; i++) {		// Linear probing
+		int probeIndex = (index + i) % TABLE_SIZE;	// Wrap around the table
+		
+		if (!used[probeIndex]) { // Key not found
+			return;
+		}
+		if (used[probeIndex] && table[probeIndex] == key) { // Key found
+			used[probeIndex] = false; // Mark as deleted
+			return;
+		}
+	}
+}
 
+bool MyHash::contains(int key) {
+	int index = hashFunction(key);
+	for (int i = 0; i < TABLE_SIZE; i++) {		// Linear probing
+		int probeIndex = (index + i) % TABLE_SIZE;	// Wrap around the table
+		
+		if (!used[probeIndex]) { // Key not found
+			return false;
+		}
+		if (used[probeIndex] && table[probeIndex] == key) { // Key found
+			return true;
+		}
+	}
+	return false;
+}
 
+void MyHash::printTable() {
+	for(int i = 0; i < TABLE_SIZE; i++) {
+		if(used[i]) {
+			std::cout << i << ": " << table[i] << std::endl;
+		} else {
+			std::cout << i << ": " << "empty" << std::endl;
+		}
+	}
+}
 

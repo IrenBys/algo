@@ -15,8 +15,7 @@ private:
 public: 
 	MyHash();	
 	void insert(int key);	
-	void remove(int key);	
-	void erase(int key);
+	void erase(int key);	
 	bool contains(int key);
 	void printTable();
 };
