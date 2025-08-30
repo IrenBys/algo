@@ -31,3 +31,22 @@ void test_printTable() {
 	std::cout << "test_printTable passed." << std::endl;
 }
 
+void collision_test() {
+	MyHash hash;
+	
+	int x1 = 7; // 7 % 10 = 7
+	int x2 = 17; // 17 % 10 = 7 (collision with 7)
+	hash.insert(x1);
+	hash.insert(x2); // Should handle collision
+
+	// Both should be present
+	assert(hash.contains(x1));
+	assert(hash.contains(x2));
+
+	// Erase one and check the other still exists
+	hash.erase(x1);
+	assert(!hash.contains(x1));
+	assert(hash.contains(x2));
+	std::cout << "collision_test passed." << std::endl;
+}
+
