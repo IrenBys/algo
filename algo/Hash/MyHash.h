@@ -10,7 +10,7 @@ private:
 	std::vector<std::list<int>> table;  // Array of lists for chaining
 
 public: 
-	MyHash();
+	MyHash(size_t size);
 	void insert(int key);	
 	void erase(int key);	
 	bool contains(int key);
