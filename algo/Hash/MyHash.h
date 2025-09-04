@@ -1,20 +1,16 @@
 #pragma once
 
 #include <list>
+#include <vector>
 #include <iostream>
 
 class MyHash {
 private:
-	static const int TABLE_SIZE = 10; // Size of the hash table
-	std::list<int> table[TABLE_SIZE]; // Array of lists for chaining
-
-	// Hash function
-	int hashFunction(int key) {
-		return key % TABLE_SIZE;
-	}
+	size_t bucket_count; ; // Size of the hash table
+	std::vector<std::list<int>> table;  // Array of lists for chaining
 
 public: 
-	MyHash() {};
+	MyHash();
 	void insert(int key);	
 	void erase(int key);	
 	bool contains(int key);
