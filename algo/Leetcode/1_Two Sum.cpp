@@ -17,16 +17,12 @@ public:
         std::unordered_map<int, int> table;
 
         for (int i = 0; i < nums.size(); ++i) {
-			table[i] = nums[i]; // Store index and value in the hash table
+			int search = target - nums[i];  // Calculate the complement
 
-			for (auto& pair : table) { // Iterate through the hash table
-                int idx = pair.first;      
-                int val = pair.second;
-
-				if (idx != i && val + nums[i] == target) {  // Check if the sum equals the target
-					return { idx, i };  // Return the indices if found
-                }
-            }
+            if (table.count(search)) {  // Check if the complement exists in the map
+                return {table[search], i};  // Return the indices of the two numbers
+			}
+			table[nums[i]] = i;  // Store the number and its index in the map                
         }
 
 		return {};  // Return an empty vector if no solution is found
