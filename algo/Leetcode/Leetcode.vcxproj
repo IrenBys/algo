@@ -130,6 +130,7 @@
     <ClCompile Include="1672_Richest Customer Wealth.cpp" />
     <ClCompile Include="1929_Concatenation of Array.cpp" />
     <ClCompile Include="19_Remove Nth Node From End of List.cpp" />
+    <ClCompile Include="1_Two Sum.cpp" />
     <ClCompile Include="2057_ Smallest Index With Equal Value.cpp" />
     <ClCompile Include="206_Reverse Linked List.cpp" />
     <ClCompile Include="21_Merge Two Sorted Lists.cpp" />

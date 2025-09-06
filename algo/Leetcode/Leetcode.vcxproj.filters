@@ -69,5 +69,8 @@
     <ClCompile Include="430_Flatten a Multilevel Doubly Linked List.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="1_Two Sum.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
